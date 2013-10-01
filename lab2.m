@@ -9,12 +9,12 @@ signal = fft(signal);
 signal(1500:2500)=0;
 signal = ifft(signal);
 
-out = SSMF_Dispersion( signal, 1550, 40 , 1000 );
+out = SSMF_Dispersion( signal, 1550, 40 , 100 );
 figure;
 plot(real(out));
 
 
-out = Dispersion_Compensate( out, 1550, 40 , 1000 );
+out = Dispersion_Compensate( out, 1550, 40 , 100 );
 figure;
 plot(real(out));
 
